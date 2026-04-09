@@ -126,11 +126,11 @@
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 19px;
       color: #cbd5e1;
       max-width: 820px;
       margin: 0 auto;
-      line-height: 1.7;
+      line-height: 1.45;
     }
 
     /* ===================== */
@@ -209,13 +209,13 @@
       margin-top: 0;
       margin-bottom: 10px;
       font-size: 25px;
-      line-height: 1.25;
+      line-height: 1.2;
     }
 
     .card p {
       margin: 0;
       color: #cbd5e1;
-      line-height: 1.7;
+      line-height: 1.45;
       font-size: 16px;
     }
 
@@ -247,16 +247,6 @@
       transform: translateY(-2px);
     }
 
-    .btn.primary {
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #02111b;
-      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.28);
-    }
-
-    .btn.primary:hover {
-      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.38);
-    }
-
     .btn.secondary {
       background: rgba(255,255,255,0.08);
       color: white;
@@ -276,9 +266,88 @@
     /* ===================== */
     footer {
       text-align: center;
-      padding: 40px 20px 55px;
+      padding: 30px 20px 55px;
       color: #94a3b8;
       font-size: 14px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+      transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    .social-link svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      transition: filter 0.22s ease, transform 0.22s ease;
+    }
+
+    .social-link:hover svg {
+      transform: scale(1.08);
+    }
+
+    .social-link.twitch {
+      color: #a970ff;
+    }
+
+    .social-link.twitch:hover {
+      border-color: rgba(169, 112, 255, 0.45);
+      background: rgba(169, 112, 255, 0.08);
+      box-shadow:
+        0 12px 28px rgba(0,0,0,0.28),
+        0 0 22px rgba(169, 112, 255, 0.28);
+    }
+
+    .social-link.twitch:hover svg {
+      filter: drop-shadow(0 0 10px rgba(169, 112, 255, 0.55));
+    }
+
+    .social-link.youtube {
+      color: #ff3b30;
+    }
+
+    .social-link.youtube:hover {
+      border-color: rgba(255, 59, 48, 0.45);
+      background: rgba(255, 59, 48, 0.08);
+      box-shadow:
+        0 12px 28px rgba(0,0,0,0.28),
+        0 0 22px rgba(255, 59, 48, 0.28);
+    }
+
+    .social-link.youtube:hover svg {
+      filter: drop-shadow(0 0 10px rgba(255, 59, 48, 0.55));
+    }
+
+    .footer-text {
+      margin: 0;
+      color: #94a3b8;
     }
 
     /* ===================== */
@@ -317,7 +386,7 @@
 
       .hero p {
         font-size: 17px;
-        line-height: 1.6;
+        line-height: 1.4;
       }
 
       .section {
@@ -341,6 +410,10 @@
         font-size: 22px;
       }
 
+      .card p {
+        line-height: 1.4;
+      }
+
       .buttons {
         flex-direction: column;
       }
@@ -348,6 +421,11 @@
       .btn {
         width: 100%;
         text-align: center;
+      }
+
+      .social-link {
+        width: 48px;
+        height: 48px;
       }
     }
 
@@ -367,6 +445,10 @@
       .card img {
         height: 190px;
       }
+
+      .socials {
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -379,14 +461,14 @@
     <!-- ===================== -->
     <section class="hero">
       <div class="title-container">
-        <!-- TODO: mettre ton logo dans images/logo.png -->
         <img src="images/logo.png" alt="Logo PAPeen" class="logo">
         <h1>Mes logiciels</h1>
       </div>
 
       <p>
         Ici, vous pouvez découvrir plusieurs logiciels que j’ai créés, avec leur description
-        et des captures d’écran. L’accès aux logiciels se fait sur demande seulement. Envie de participer à un projet unique et original ? Saisi ta chance avant qu'il ne soit trop tard !
+        et des captures d’écran. L’accès aux logiciels se fait sur demande seulement. Envie
+        de participer à un projet unique et original ? Saisis ta chance avant qu'il ne soit trop tard !
       </p>
     </section>
 
@@ -400,7 +482,6 @@
         <!-- LOGICIEL 1 -->
         <!-- ===================== -->
         <div class="card">
-          <!-- TODO: remplacer par ta vraie capture si besoin -->
           <img src="images/follow-tracker.png" alt="Capture Follow Tracker">
 
           <div class="card-content">
@@ -425,7 +506,6 @@
         <!-- LOGICIEL 2 -->
         <!-- ===================== -->
         <div class="card">
-          <!-- TODO: remplacer par ta vraie capture -->
           <img src="images/logiciel-2.png" alt="Capture Soutien streamers et streameuses">
 
           <div class="card-content">
@@ -446,12 +526,9 @@
           </div>
         </div>
 
-        <!-- ===================== -->
-        <!-- AJOUTER UN LOGICIEL -->
-        <!-- ===================== -->
         <!--
-          Il suffit de copier une <div class="card"> complète
-          et de changer :
+          Pour ajouter un nouveau logiciel :
+          copie une carte complète puis change :
           - l'image
           - le titre
           - la description
@@ -465,7 +542,21 @@
     <!-- FOOTER -->
     <!-- ===================== -->
     <footer>
-      © 2026 - PAPeen
+      <div class="socials">
+        <a class="social-link twitch" href="https://www.twitch.tv/PAPeen" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M2 2h20v13.5L17.5 20H13l-2.5 2.5V20H6L2 16V2zm18 12.5V4H4v11.2L6.8 18h4.7v2.2L13.7 18h3l3.3-3.5zM9 7h2v6H9V7zm5 0h2v6h-2V7z"/>
+          </svg>
+        </a>
+
+        <a class="social-link youtube" href="https://www.youtube.com/@PixeletPapote" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.5v-7L15.8 12l-6.2 3.5z"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer-text">© 2026 - PAPeen</p>
     </footer>
   </div>
 </body>
