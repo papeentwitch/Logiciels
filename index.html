@@ -97,7 +97,7 @@
     /* ===================== */
     .hero {
       text-align: center;
-      padding: 90px 20px 40px;
+      padding: 90px 20px 30px;
       animation: fadeUp 0.9s ease;
     }
 
@@ -131,6 +131,60 @@
       max-width: 820px;
       margin: 0 auto;
       line-height: 1.35;
+    }
+
+    /* ===================== */
+    /* WARNING BOX */
+    /* ===================== */
+    .warning-box {
+      max-width: 700px;
+      margin: 24px auto 0;
+      padding: 16px 20px;
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      background: rgba(255, 183, 0, 0.08);
+      border: 1px solid rgba(255, 183, 0, 0.25);
+      color: #facc15;
+
+      box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(250, 204, 21, 0.10);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+
+      animation: fadeUp 0.8s ease;
+    }
+
+    .warning-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+      );
+      pointer-events: none;
+    }
+
+    .warning-box strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: #fde68a;
+      letter-spacing: 0.2px;
+    }
+
+    .warning-box span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #fcd34d;
     }
 
     /* ===================== */
@@ -389,6 +443,20 @@
         line-height: 1.4;
       }
 
+      .warning-box {
+        margin-top: 20px;
+        padding: 14px 16px;
+        border-radius: 14px;
+      }
+
+      .warning-box strong {
+        font-size: 14px;
+      }
+
+      .warning-box span {
+        font-size: 13px;
+      }
+
       .section {
         padding: 16px;
       }
@@ -470,6 +538,11 @@
         et des captures d’écran. L’accès aux logiciels se fait sur demande seulement. Envie
         de participer à un projet unique et original ? Saisis ta chance avant qu'il ne soit trop tard !
       </p>
+
+      <div class="warning-box">
+        <strong>⚠️ Profil GitHub obligatoire</strong>
+        <span>Toute demande sans profil GitHub sera automatiquement refusée.</span>
+      </div>
     </section>
 
     <!-- ===================== -->
@@ -493,8 +566,6 @@
 
             <div class="buttons">
               <a class="btn secondary" href="mailto:papeentwitch@gmail.com?subject=Demande%20d%27acces%20-%20Follow%20Tracker&body=Bonjour%2C%0D%0A%0D%0AMerci%20de%20remplir%20TOUTES%20les%20informations%20ci-dessous%20(sinon%20la%20demande%20sera%20refusee).%0D%0A%0D%0APseudo%20ou%20nom%20:%20%0D%0AUtilisation%20prevue%20:%20%0D%0APourquoi%20je%20souhaite%20y%20avoir%20acces%20:%20%0D%0AProfil%20GitHub%20(OBLIGATOIRE)%20:%20%0D%0A%0D%0AMerci.">
-              Demander l'accès
-              </a>
                 Demander l'accès
               </a>
             </div>
@@ -511,14 +582,13 @@
             <h2>Soutien streamers / streameuses</h2>
             <p>
               Un logiciel pensé pour rester présent sur tes streams favoris
-              et soutenir les créateurs et créatrices, quand tu n’es pas devant ton PC. On appel ça aussi, un auto lurk !
+              et soutenir les créateurs et créatrices, quand tu n’es pas devant ton PC. On appelle ça aussi un auto lurk !
             </p>
 
             <div class="buttons">
               <a class="btn secondary" href="mailto:papeentwitch@gmail.com?subject=Demande%20d%27acces%20-%20Soutien%20streamers%20%2F%20streameuses&body=Bonjour%2C%0D%0A%0D%0AMerci%20de%20remplir%20TOUTES%20les%20informations%20ci-dessous%20(sinon%20la%20demande%20sera%20refusee).%0D%0A%0D%0APseudo%20ou%20nom%20:%20%0D%0AUtilisation%20prevue%20:%20%0D%0APourquoi%20je%20souhaite%20y%20avoir%20acces%20:%20%0D%0AProfil%20GitHub%20(OBLIGATOIRE)%20:%20%0D%0A%0D%0AMerci.">
-              Demander l'accès
+                Demander l'accès
               </a>
-              
             </div>
           </div>
         </div>
@@ -534,11 +604,6 @@
 
       </div>
     </section>
-
-    <p style="color:#94a3b8; font-size:14px; margin-top:10px;">
-⚠️ Le profil GitHub est obligatoire pour obtenir l’accès.
-Toute demande incomplète sera refusée.
-</p>
 
     <!-- ===================== -->
     <!-- FOOTER -->
