@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes logiciels</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 50px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.15);
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 50px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Mes logiciels</h1>
+    <p>
+      Bienvenue sur ma page de présentation.  
+      Ici, vous pouvez découvrir plusieurs logiciels que j’ai créés, avec leur description,
+      des captures d’écran et les liens vers GitHub.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="software-grid">
+
+      <div class="card">
+        <img src="images/follow-tracker.png" alt="Capture Follow Tracker">
+        <div class="card-content">
+          <h2>Follow Tracker</h2>
+          <p>
+            Un logiciel pour suivre facilement les abonnements, les changements et les données importantes.
+          </p>
+          <div class="buttons">
+            <a class="btn" href="https://github.com/TON-PSEUDO/follow-tracker" target="_blank">Voir sur GitHub</a>
+            <a class="btn secondary" href="#">Télécharger</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/logiciel-2.png" alt="Capture Logiciel 2">
+        <div class="card-content">
+          <h2>Nom du logiciel 2</h2>
+          <p>
+            Petite description simple du deuxième logiciel. Explique en une phrase à quoi il sert.
+          </p>
+          <div class="buttons">
+            <a class="btn" href="https://github.com/TON-PSEUDO/logiciel-2" target="_blank">Voir sur GitHub</a>
+            <a class="btn secondary" href="#">Télécharger</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/logiciel-3.png" alt="Capture Logiciel 3">
+        <div class="card-content">
+          <h2>Nom du logiciel 3</h2>
+          <p>
+            Petite description simple du troisième logiciel. Tu peux ajouter autant de cartes que tu veux.
+          </p>
+          <div class="buttons">
+            <a class="btn" href="https://github.com/TON-PSEUDO/logiciel-3" target="_blank">Voir sur GitHub</a>
+            <a class="btn secondary" href="#">Télécharger</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 - Mes logiciels
+  </footer>
+</body>
+</html>
